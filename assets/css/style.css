@@ -54,6 +54,27 @@ body {
   background-color: #212d44;
 }
 
+#battleStatsContainer1, #battleStatsContainer2 {
+  height: 200px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+#healthText1, #healthTextNumber1, #attackText1, #attackTextNumber1,
+#healthText2, #healthTextNumber2, #attackText2, #attackTextNumber2 {
+  font-size: larger;
+  font-weight: lighter;
+}
+
+#healthText1, #healthTextNumber1, #attackText1, #attackTextNumber1 {
+  color: green;
+}
+
+#healthText2, #healthTextNumber2, #attackText2, #attackTextNumber2 {
+  color: red;
+}
+
 .flex {
   display: flex;
   justify-content: center;

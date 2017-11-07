@@ -55,23 +55,46 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 col-lg-2" id="chosenEnemy"></div>
+      <div class="col-xs-12 col-lg-2" id="chosenEnemy" style="display: flex; flex-wrap: nowrap;"></div>
     </div>
     <div class="row">
       <h6 id="characterBattleText"></h6>
       <h6 id="enemyBattleText"></h6>
     </div>
     <div class="row">
-        <div class="col-lg-2" id=" gameOverTextContainer">
-          <h4 id="gameOverText">GAME OVER</h4>
-        </div>
+      <div class="col-lg-2" id=" gameOverTextContainer">
+        <h4 id="gameOverText">GAME OVER</h4>
       </div>
-      <div class="row">
-        <div class="col-lg-2">
-          <button type="button" id="restartButton">
-            PLAY AGAIN
-          </button>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-2">
+        <button type="button" id="restartButton">
+          PLAY AGAIN
+        </button>
+      </div>
+    </div>
+    <div class="col-lg-6" id="battleStatsContainer1">
+      <div>
+        <p id="healthText1">Health:
+          <p id="healthTextNumber1"></p>
+        </p>
+        <br>
+        <p id="attackText1">Attack:
+          <p id="attackTextNumber1"></p>
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-6" id="battleStatsContainer2">
+      <div>
+        <p id="healthText2">Health:
+          <p id="healthTextNumber2"></p>
+        </p>
+        <br>
+        <p id="attackText2">Attack:
+          <p id="attackTextNumber2"></p>
+        </p>
+      </div>
+    </div>
   </div>
   <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"

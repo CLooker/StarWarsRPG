@@ -1,6 +1,8 @@
 $(document).ready(function() {
   $("#restartButton").hide();
   $("#gameOverText").hide();
+  var battleStatsContainer1 = $("#battleStatsContainer1").detach();
+  var battleStatsContainer2 = $("#battleStatsContainer2").detach();
 
   var characterChosen = false;
   var enemyChosen = false;
@@ -11,11 +13,12 @@ $(document).ready(function() {
   function battle(){   
     var battleCalled = Math.floor(Math.random()*(20-(-20)+1)-20); 
     if (battleCalled > 0){
-      enemyHP -= battleCalled;
+      enemyHP -= battleCalled;      
       $("#characterBattleText").text("You attacked for " + battleCalled + " damage.");
     }
     else if (battleCalled < 0) {
       characterHP += battleCalled;
+      $("#healthTextNumber1").text(characterHP);
       $("#enemyBattleText").text("You were attacked for " + Math.abs(battleCalled) + " damage.");
     }
     else {
@@ -26,6 +29,7 @@ $(document).ready(function() {
       $("#characterBattleText").text("You've been defeated...GAME OVER");
       $("#restartButton").show();
       $("#enemyBattleText").empty();
+      $("#attack").attr("disabled", "disabled");
     }
     else if (enemyHP <= 0) {
       $("#characterBattleText").text("You've won this battle.");
@@ -35,6 +39,7 @@ $(document).ready(function() {
       characterHP = 100;
       enemyHP = 100;
     }
+    updateBattleStats(battleCalled);
     console.log(`battleCalled: ${battleCalled}`);
     console.log(`characterHP: ${characterHP}`);
     console.log(`enemyHP: ${enemyHP}`);
@@ -61,11 +66,30 @@ $(document).ready(function() {
        enemyChosen = true;
       }             
     });
+
+  function updateBattleStats(battleCalled) {
+    $("#healthTextNumber1").text(characterHP);  
+    $("#healthTextNumber2").text(enemyHP);
+    if (battleCalled === 0) {
+      $("#attackTextNumber1").text("+0");
+      $("#attackTextNumber2").text("+0");
+    } 
+    else if ( battleCalled > 0) {
+       $("#attackTextNumber1").text(`+${battleCalled}`);
+      $("#attackTextNumber2").text("0");
+    }
+    else {
+      $("#attackTextNumber1").text("0");
+      $("#attackTextNumber2").text(`+${Math.abs(battleCalled)}`);
+    }
+  }
   
   $("#attack").click(
     function() {
       if (enemyChosen === true) {
-        var battleCalled = battle(); 
+        $("#characterRow").append(battleStatsContainer1);
+        $("#chosenEnemy").append(battleStatsContainer2);
+        var battleCalled = battle();        
       }         
     });
   
