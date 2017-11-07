@@ -27,6 +27,7 @@ $(document).ready(function() {
     }
     if(characterHP <= 0) {
       $("#characterBattleText").text("You've been defeated...GAME OVER");
+      $("#characterRow").empty();
       $("#restartButton").show();
       $("#enemyBattleText").empty();
       $("#attack").attr("disabled", "disabled");
@@ -36,7 +37,7 @@ $(document).ready(function() {
       $("#chosenEnemy").empty();
       $("#enemyBattleText").empty();
       enemyChosen = false;
-      characterHP = 100;
+      characterHP = 100;      
       enemyHP = 100;
     }
     updateBattleStats(battleCalled);
@@ -60,6 +61,7 @@ $(document).ready(function() {
     function(e) {
       if(characterChosen === true && enemyChosen === false) {
        $("#characterBattleText").text(""); 
+       $("#attackTextNumber1").text("");
        var chosenEnemy = $(e.target).closest("div").detach();
        $("#chosenEnemy").empty();
        $("#chosenEnemy").append(chosenEnemy);
@@ -81,7 +83,7 @@ $(document).ready(function() {
     else {
       $("#attackTextNumber1").text("0");
       $("#attackTextNumber2").text(`+${Math.abs(battleCalled)}`);
-    }
+    }    
   }
   
   $("#attack").click(
