@@ -1,6 +1,8 @@
 # StarWarsRPG
 
-This Game is Under Construction
+**This Game is Under Construction**
+
+https://clooker.github.io/StarWarsRPG/
 
 This is a Star Wars desktop web-app game.
 
