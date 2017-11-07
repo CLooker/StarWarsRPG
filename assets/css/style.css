@@ -1,0 +1,61 @@
+@font-face {
+font-family: starWars;
+src: url('Rebellion.otf');
+}
+
+body { 
+  background: url(darthVader2.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: starWars;
+  color: #e4efff;
+}
+
+#wedge, #han, #luke, #yoda, #boba, #maul, #vader {
+  height: 200px;
+  width: 310px;
+}
+
+#main {
+  height: 1000px;
+  width: 100%;
+}
+
+.character {
+  /*height: 152px;
+  width: 201px;*/
+  border: solid 1px green;
+  /*background-color: grey;*/
+}
+
+.enemy {
+  border: solid 1px darkred;
+}
+
+/*#enemyRow {
+  height: 152px;  
+}*/
+
+#characterRow, #enemyRow {
+  height: 210px;
+  width: 1232px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+
+/*#characterWrapper {
+  height: 152px;
+}*/
+
+#attack, #restartButton {
+  background-color: #212d44;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

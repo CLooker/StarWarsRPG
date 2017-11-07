@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  </head>
+<body>
+  <div class="container" id="main">
+    <div>
+      <h2 style="text-align: center;">Star Wars RPG!</h2>
+    </div>
+    <div class="row">
+      <h4>Your Character</h4>
+    </div>
+    <div class="row" id="characterRow">
+        <div class="col-xs-12 col-lg-3 character flex" id="wedge">
+          <img src="assets/images/wedge.jpg">
+        </div>
+        <div class="col-xs-12 col-lg-3 character flex" id="han">
+          <img src="assets/images/han.jpg">
+          <p class="characterHP"></p>
+        </div>
+        <div class="col-xs-12 col-lg-3 character flex" id="luke">
+          <img src="assets/images/luke.jpg">
+          <p class="characterHP"></p>
+        </div>
+        <div class="col-xs-12 col-lg-3 character flex" id="yoda">
+          <img src="assets/images/yoda.jpg">
+          <p class="characterHP"></p>
+        </div>
+    </div>
+    <div class="row">
+      <h4>Enemies Available To Attack</h4>
+    </div>
+    <div class="row" id="enemyRow">
+        <div class="col-xs-12 col-lg-3 enemy flex" id="boba">
+          <img src="assets/images/boba.jpg">
+        </div>
+        <div class="col-xs-12 col-lg-3 enemy flex" id="maul">
+          <img src="assets/images/maul.jpg">
+          <p class="characterHP"></p>
+        </div>
+        <div class="col-xs-12 col-lg-3 enemy flex" id="vader">
+          <img src="assets/images/vader.jpg">
+          <p class="characterHP"></p>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-lg-2">
+        <h4>Fight Section</h4>
+        <button id="attack">Attack</button>
+        <h4>Defender</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-lg-2" id="chosenEnemy"></div>
+    </div>
+    <div class="row">
+      <h6 id="characterBattleText"></h6>
+      <h6 id="enemyBattleText"></h6>
+    </div>
+    <div class="row">
+        <div class="col-lg-2" id=" gameOverTextContainer">
+          <h4 id="gameOverText">GAME OVER</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-2">
+          <button type="button" id="restartButton">
+            PLAY AGAIN
+          </button>
+        </div>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>  
