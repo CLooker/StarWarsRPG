@@ -29,6 +29,7 @@ $(document).ready(function() {
     }
     else if (enemyHP <= 0) {
       $("#characterBattleText").text("You've won this battle.");
+      $("#chosenEnemy").empty();
       $("#enemyBattleText").empty();
       enemyChosen = false;
       characterHP = 100;
@@ -63,8 +64,11 @@ $(document).ready(function() {
   
   $("#attack").click(
     function() {
-      var battleCalled = battle();    
+      if (enemyChosen === true) {
+        var battleCalled = battle(); 
+      }         
     });
+  
   $("#restartButton").click(function() {
     location.reload();
   });
