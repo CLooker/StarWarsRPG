@@ -8,7 +8,7 @@ This is a Star Wars desktop web-app game.
 
 You will be given 4 characters to choose. You choose your character by clicking on their image.
 
-You will then be give 3 enemies to choose. You choose your enemy by clicking on their image.
+You will then be given 3 enemies to choose. You choose your enemy by clicking on their image.
 
 You are now prepared to battle!
 
